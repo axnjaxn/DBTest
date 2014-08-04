@@ -20,8 +20,17 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:gravity="left"
-        android:layout_weight="6"
+        android:layout_weight="3"
         android:text="Content"
         android:textSize="14sp" />
 
+    <TextView
+        android:id="@+id/age"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:layout_weight="3"
+        android:text="Age"
+        android:textSize="14sp" />
+    
 </LinearLayout>

@@ -70,9 +70,11 @@ public class MainActivity extends Activity {
 				ContentClass item = (ContentClass)obj;
 				TextView title = (TextView)view.findViewById(R.id.title);
 				TextView content = (TextView)view.findViewById(R.id.content);
+				TextView age = (TextView)view.findViewById(R.id.age);
 				
 				title.setText(item.name);
 				content.setText(item.content);
+				age.setText(Integer.toString(item.age));
 			}
 		});
 		adapter.addCategory(cat);
@@ -87,7 +89,9 @@ public class MainActivity extends Activity {
 		
 		String content = String.format("I.Q. %3d", (int)(100 + 10 * random.nextGaussian()));
 		
-		return dbhelper.insert(name, content);
+		int age = 20 + random.nextInt(40);
+		
+		return dbhelper.insert(name, content, age);
 	}
 	
 	public void add(View v) {
